@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyunculuk Ajansı Sayfası - Apaydın Ajans</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Apaydın Oyunculuk Ajansı</h1>
+        
+        <div class="hero-image">
+            <a href="galeri.html">
+                <img src="ajans_tanitim.jpg" alt="Apaydın Ajansı Oyuncuları Toplu Fotoğraf"> 
+            </a>
+        </div>
+
+        <nav>
+            <a href="#hakkimizda">Hakkımızda</a>
+            
+            <div class="dropdown">
+                <a href="#oyuncular" class="dropbtn">Oyuncularımız 🔽</a>
+                <div class="dropdown-content">
+                    <a href="#oyuncular">Tüm Oyuncular</a>
+                    <a href="#oyuncular">Drama</a>
+                    <a href="#oyuncular">Komedi</a>
+                </div>
+            </div>
+            <a href="#basvuru">Başvuru / Kayıt</a>
+            <a href="#projeler">Yapılan İşler</a>
+            <a href="galeri.html">Resim Galerisi</a> 
+            <a href="#iletisim">İletişim</a> 
+        </nav>
+    </header>
+
+    <main>
+        <section id="hakkimizda">
+            <h2>Hakkımızda</h2>
+            <p>2007'den bu yana bu sektördeki en büyük amacımız ekran önüne en yakışan, en başarılı ve çalışkan oyuncu adaylarını ekran önüne taşımaktır. Kaliteli yapımlarda rol alarak kariyerlerini zirveye taşımalarına rehberlik ediyoruz.</p>
+        </section>
+        
+        <hr>
+
+        <section id="basvuru">
+            <h2>Oyuncu Başvuru Formu</h2>
+            <form id="anaBasvuruFormu" action="#" method="POST"> 
+                <div class="form-group">
+                    <label for="ad">Adınız:</label>
+                    <input type="text" id="ad" name="ad" required>
+                </div>
+                <div class="form-group">
+                    <label for="soyad">Soyadınız:</label>
+                    <input type="text" id="soyad" name="soyad" required>
+                </div>
+                <div class="form-group">
+                    <label for="yas">Yaşınız:</label>
+                    <input type="number" id="yas" name="yas" min="16" max="99" required>
+                </div>
+                <div class="form-group">
+                    <label for="cinsiyet">Cinsiyet:</label>
+                    <select id="cinsiyet" name="cinsiyet" required>
+                        <option value="">Seçiniz</option>
+                        <option value="kadin">Kadın</option>
+                        <option value="erkek">Erkek</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Başvuruyu Gönder</button>
+                <div id="anaBasvuruStatus" style="margin-top: 15px; font-weight: bold; color: green;"></div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="oyuncular">
+            <h2>Ajans Oyuncuları ve Alanları</h2>
+            <div class="oyuncu-alanlari-container"> 
+                <div class="alan-kutucuklari">
+                    <h3>Drama Oyuncuları</h3>
+                    <img src="melis_birkan.jpg" alt="Melis Birkan" class="oyuncu-resmi"> 
+                    <p>Önemli İsimler: Melis Birkan, Beren Saat, İrem Helvacıoğlu</p>
+                    <p>Önemli Projeler: Issız Adam, Aşkı Memnu, Sen Anlat Karadeniz</p>
+                </div>
+                <div class="alan-kutucuklari">
+                    <h3>Komedi Oyuncuları</h3>
+                    <img src="demet_evgar.jpg" alt="Demet Evgar" class="oyuncu-resmi"> 
+                    <p>Önemli İsimler: Demet Evgar, Elçin Sangu, Ulaş Tuna Astepe</p>
+                    <p>Önemli Projeler: Bahar, Kiralıka Aşk</p>
+                </div>
+                <div class="alan-kutucuklari">
+                    <h3>Çocuk & Genç Oyuncular</h3>
+                    <img src="cocuk_oyuncu.jpg" alt="Çocuk Oyuncu" class="oyuncu-resmi"> 
+                    <p>Önemli İsimler: Ata Berk Mutlu, Beren Gökyıldız</p>
+                    <p>Önemli Projeler: Poyraz Karayel, Anne</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="iletisim">
+            <h2>İletişim Formu</h2>
+            <p>Sorularınız, işbirliği teklifleriniz veya geri bildirimleriniz için bize yazabilirsiniz.</p>
+            <form id="iletisimFormu" action="#" method="POST">
+                <div class="form-group">
+                    <label for="c_ad">Adınız Soyadınız:</label>
+                    <input type="text" id="c_ad" name="c_ad" required>
+                </div>
+                <div class="form-group">
+                    <label for="c_email">E-posta Adresiniz:</label>
+                    <input type="email" id="c_email" name="c_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="c_message">Mesajınız:</label>
+                    <textarea id="c_message" name="c_message" rows="6" required></textarea>
+                </div>
+                <button type="submit">Mesajı Gönder</button>
+                <div id="iletisimStatus" style="margin-top: 15px; font-weight: bold;"></div>
+            </form>
+        </section>
+
+        <hr>
+        
+        <section id="neden-oyuncu">
+            <h2>Neden Oyuncu Olmalıyım?</h2>
+            <p>**Bu işi neden yapmalıyım, hangi koşulları sağlıyorum?**</p>
+            <ul>
+                <li>Oyunculuğun getirdiği sanatsal tatmin ve kişisel gelişim.</li>
+                <li>Ajansımızın sağladığı profesyonel eğitimler ve geniş kariyer fırsatları.</li>
+                <li>Başlangıç koşulları ve beklentilerimiz hakkında detaylı bilgi.</li>
+            </ul>
+            <p><a href="#">Detaylı Bilgi ve Koşullar İçin Tıklayın</a></p>
+        </section>
+
+        <hr>
+
+        <section id="guncel-cast">
+            <h2>Güncel Cast Çağrıları</h2>
+            <ul>
+                <li> Taşacak Bu Deniz Yeni Komedi Dizisi - <small>(Aranan Profil: 20-25 yaş, erkek, enerjik)</small></li>
+                <li> Teşkilat Aksiyon Dizisi - <small>(Aranan Profil: 40-50 yaş, kadın, dram yeteneği yüksek)</small></li>
+                <li> Banka Reklam Filmi - <small>(Aranan Profil: 30-35 yaş, güleryüzlü aile babası/annesi)</small></li>
+            </ul>
+        </section>
+        
+        <hr>
+
+        <section id="projeler">
+            <h2>Yapılan İşler ve Başarılı Projeler</h2>
+            <ul>
+                <li> Issız Adam (2008) - Melis Birkan, Cemal Hünal yer aldı.</li>
+                <li> Sen Anlat Karadeniz (2018-2019) - İrem Helvacıoğlu, Ulaş Tuna Astepe yer aldı.</li>
+                <li> Hayallerim Benimdir (2024) - Kısa film, genç yeteneklerimiz rol aldı.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apaydın Oyunculuk Ajansı. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

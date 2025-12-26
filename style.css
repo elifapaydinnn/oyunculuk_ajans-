@@ -1,0 +1,304 @@
+/* TEMEL STİLLER */
+:root {
+    --primary-color: #A00000; /* Koyu Kırmızı/Bordo */
+    --secondary-color: #D4AF37; /* Altın Sarısı */
+    --text-color: #333;
+    --background-light: #f9f9f9;
+    --background-dark: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+/* HEADER ve NAVİGASYON */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+}
+
+/* HERO GÖRSELİ STİLİ */
+.hero-image {
+    margin: 10px auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%; 
+    height: auto;
+    max-height: 400px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    padding-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* DROPDOWN (ALT MENÜ) STİLLERİ */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: none; 
+}
+
+.dropdown-content a:hover {
+    background-color: #7b0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+/* ANA İÇERİK ve BÖLÜMLER */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: var(--background-dark);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+
+/* FORM STİLLERİ */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="text"], input[type="number"], select, input[type="email"], textarea { 
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(160, 0, 0, 0.3);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #e5c156; 
+    transform: translateY(-2px);
+}
+
+/* OYUNCULAR KUTUCUKLARI  */
+.oyuncu-alanlari-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.alan-kutucuklari {
+    flex: 1 1 300px; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--background-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.alan-kutucuklari:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.alan-kutucuklari h3 {
+    color: var(--secondary-color);
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+/* Oyuncu Kutucukları İçindeki Resimler İçin Stil */
+.oyuncu-resmi {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* LİSTE STİLLERİ */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--text-color);
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+/* GALERİ VE MODAL STİLLERİ */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.thumbnail img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent; 
+    transition: transform 0.3s, border-color 0.3s;
+}
+.thumbnail img:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary-color); 
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    padding-top: 60px;
+}
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover, .close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* İletişim Formu Mesaj Alanı Stili */
+#iletisimStatus {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
