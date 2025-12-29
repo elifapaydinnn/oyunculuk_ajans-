@@ -13,7 +13,7 @@ if (anaForm) {
     });
 }
 
-// ====== 2. İLETİŞİM FORMU ONAYI (Hocanın Gereksinimi) ======
+// ====== 2. İLETİŞİM FORMU ONAYI  ======
 const iletisimFormu = document.getElementById('iletisimFormu');
 const iletisimStatus = document.getElementById('iletisimStatus');
 
@@ -30,7 +30,7 @@ if (iletisimFormu) {
     });
 }
 
-// ====== 3. RESİM GALERİSİ MODAL KONTROLÜ (Hocanın Gereksinimi) ======
+// ====== 3. RESİM GALERİSİ MODAL KONTROLÜ  ======
 const modal = document.getElementById("myModal");
 const modalImage = document.getElementById("modalImage");
 const closeBtn = document.getElementsByClassName("close")[0];
@@ -56,4 +56,5 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+
 }
