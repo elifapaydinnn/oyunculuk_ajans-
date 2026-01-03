@@ -302,3 +302,54 @@ footer {
     font-weight: bold;
     color: var(--primary-color);
 }
+
+/* GİRİŞ YAP BUTONU ÖZEL STİLİ */
+.login-btn-style {
+    background-color: white;
+    color: var(--primary-color) !important; /* Bordo yazı */
+    border-radius: 20px;
+    padding: 5px 15px !important;
+    margin-left: 15px; /* İletişimden biraz ayrı dursun */
+    transition: all 0.3s ease;
+}
+
+.login-btn-style:hover {
+    background-color: var(--secondary-color); /* Sarı arka plan */
+    color: white !important;
+}
+
+/* LOGIN MODAL İÇERİK AYARLARI */
+.login-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Sayfanın biraz daha üstünde dursun */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px; /* Çok geniş olmasın */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.login-content h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.full-width-btn {
+    width: 100%; /* Buton tüm satırı kaplasın */
+    margin-top: 10px;
+}
+
+/* Login Kapatma (X) Butonu */
+.close-login {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-login:hover {
+    color: var(--primary-color);
+}
