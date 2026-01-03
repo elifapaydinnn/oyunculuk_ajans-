@@ -58,3 +58,61 @@ window.onclick = function(event) {
     }
 
 }
+
+// ====== 4. GİRİŞ YAP (LOGIN) MODAL İŞLEMLERİ ======
+const loginModal = document.getElementById("loginModal");
+const loginBtn = document.getElementById("loginBtn");
+const closeLogin = document.getElementsByClassName("close-login")[0];
+const loginForm = document.getElementById("loginForm");
+const loginStatus = document.getElementById("loginStatus");
+
+// Butona tıklayınca aç
+if (loginBtn) {
+    loginBtn.onclick = function(e) {
+        e.preventDefault(); // Sayfa yukarı kaymasın
+        loginModal.style.display = "block";
+    }
+}
+
+// X işaretine basınca kapat
+if (closeLogin) {
+    closeLogin.onclick = function() {
+        loginModal.style.display = "none";
+        loginStatus.innerHTML = ""; // Mesajı temizle
+        loginForm.reset(); // Formu temizle
+    }
+}
+
+// Form gönderildiğinde (Submit)
+if (loginForm) {
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const adSoyad = document.getElementById("loginName").value;
+        // Basit bir karşılama mesajı
+        loginStatus.innerHTML = `Hoşgeldiniz, ${adSoyad}! Yönlendiriliyorsunuz...`;
+        
+        // 2 saniye sonra pencereyi kapat
+        setTimeout(() => {
+            loginModal.style.display = "none";
+            loginStatus.innerHTML = "";
+            loginForm.reset();
+            // İstersen burada giriş yapıldıktan sonra butonun adını değiştirebiliriz:
+            loginBtn.innerHTML = `👤 ${adSoyad}`;
+        }, 2000);
+    });
+}
+
+// Pencere dışına tıklayınca kapat (Mevcut window.onclick içine entegre etmek daha sağlıklı)
+// Mevcut window.onclick fonksiyonunu şöyle güncelleyelim:
+window.onclick = function(event) {
+    // Galeri modali için
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    // Login modali için
+    if (event.target == loginModal) {
+        loginModal.style.display = "none";
+    }
+}
+
