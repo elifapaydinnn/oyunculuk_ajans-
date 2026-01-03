@@ -97,14 +97,12 @@ if (loginForm) {
             loginModal.style.display = "none";
             loginStatus.innerHTML = "";
             loginForm.reset();
-            // İstersen burada giriş yapıldıktan sonra butonun adını değiştirebiliriz:
+            
             loginBtn.innerHTML = `👤 ${adSoyad}`;
         }, 2000);
     });
 }
 
-// Pencere dışına tıklayınca kapat (Mevcut window.onclick içine entegre etmek daha sağlıklı)
-// Mevcut window.onclick fonksiyonunu şöyle güncelleyelim:
 window.onclick = function(event) {
     // Galeri modali için
     if (event.target == modal) {
@@ -115,4 +113,5 @@ window.onclick = function(event) {
         loginModal.style.display = "none";
     }
 }
+
 
