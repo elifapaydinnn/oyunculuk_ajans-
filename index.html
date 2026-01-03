@@ -33,6 +33,7 @@
             <a href="#projeler">Yapılan İşler</a>
             <a href="galeri.html">Resim Galerisi</a> 
             <a href="#iletisim">İletişim</a> 
+            <a href="#" id="loginBtn" class="login-btn-style">Giriş Yap 👤</a>
         </nav>
     </header>
 
@@ -163,12 +164,31 @@
 
     </main>
 
-    <div id="myModal" class="modal">
+   <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content">
             <img id="modalImage" src="">
         </div>
     </div>
+
+    <div id="loginModal" class="modal">
+    <div class="modal-content login-content">
+        <span class="close-login">&times;</span>
+        <h2>Üye Girişi</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginName">Ad Soyad:</label>
+                <input type="text" id="loginName" name="loginName" required placeholder="Adınız ve Soyadınız">
+            </div>
+            <div class="form-group">
+                <label for="loginPass">Şifre:</label>
+                <input type="password" id="loginPass" name="loginPass" required placeholder="******">
+            </div>
+            <button type="submit" class="full-width-btn">Giriş Yap</button>
+            <div id="loginStatus" style="margin-top:10px; color: green; font-weight: bold;"></div>
+        </form>
+    </div>
+</div>
 
     <footer>
         <p>&copy; 2025 Apaydın Oyunculuk Ajansı. Tüm Hakları Saklıdır.</p>
@@ -177,4 +197,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
