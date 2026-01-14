@@ -21,7 +21,6 @@ if (iletisimFormu) {
     iletisimFormu.addEventListener('submit', function(event) {
         event.preventDefault(); 
         iletisimFormu.reset(); 
-        // Hocanın istediği mesaj: "mesajınız gönderildi"
         iletisimStatus.style.color = 'green';
         iletisimStatus.innerHTML = '✅ **Mesajınız başarıyla gönderildi!**'; 
         setTimeout(() => {
@@ -113,5 +112,6 @@ window.onclick = function(event) {
         loginModal.style.display = "none";
     }
 }
+
 
 
